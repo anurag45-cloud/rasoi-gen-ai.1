@@ -1,0 +1,215 @@
+.planner-page {
+  padding-top: var(--spacing-24);
+  padding-bottom: var(--spacing-20);
+  min-height: calc(100vh - 80px);
+}
+
+.planner-header {
+  text-align: center;
+  margin-bottom: var(--spacing-16);
+}
+
+.planner-header h1 {
+  font-size: 40px;
+  margin-bottom: var(--spacing-4);
+}
+
+.planner-header p {
+  color: var(--color-text-secondary);
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.planner-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--spacing-12);
+}
+
+.taste-profile {
+  background-color: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-8);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
+  height: fit-content;
+}
+
+.dark-mode .taste-profile {
+  background-color: var(--color-beige);
+}
+
+.taste-profile h3 {
+  font-size: 24px;
+  margin-bottom: var(--spacing-6);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.taste-stat {
+  margin-bottom: var(--spacing-6);
+}
+
+.taste-stat label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-2);
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.progress-bar {
+  height: 8px;
+  background-color: var(--color-cream);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  background-color: var(--color-orange);
+}
+
+.optimizer-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
+
+.optimizer-controls {
+  background-color: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-8);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--color-border);
+}
+
+.dark-mode .optimizer-controls {
+  background-color: var(--color-beige);
+}
+
+.control-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-6);
+  margin-bottom: var(--spacing-8);
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.control-group label {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+.control-select {
+  padding: var(--spacing-3);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-cream);
+  font-size: 16px;
+  color: var(--color-text-primary);
+  font-family: inherit;
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.dark-mode .control-select {
+  background-color: var(--color-cream);
+  color: #1f2937; /* ensure text is visible */
+}
+
+.control-select:focus {
+  border-color: var(--color-orange);
+}
+
+.ai-output-card {
+  background: linear-gradient(135deg, var(--color-white) 0%, var(--color-orange-light) 100%);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-8);
+  box-shadow: var(--shadow-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.dark-mode .ai-output-card {
+  background: linear-gradient(135deg, var(--color-beige) 0%, rgba(255, 107, 53, 0.1) 100%);
+}
+
+.output-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-6);
+}
+
+.output-header h2 {
+  font-size: 32px;
+  color: var(--color-orange-hover);
+  margin-bottom: var(--spacing-2);
+}
+
+.score-badge {
+  background-color: var(--color-green);
+  color: var(--color-white);
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 18px;
+  box-shadow: var(--shadow-md);
+}
+
+.scores-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-4);
+  margin-top: var(--spacing-8);
+  padding-top: var(--spacing-8);
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.dark-mode .scores-grid {
+  border-top-color: rgba(255,255,255,0.05);
+}
+
+.score-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--spacing-2);
+}
+
+.score-item .label {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+}
+
+.score-item .value {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+@media (max-width: 992px) {
+  .planner-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .scores-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

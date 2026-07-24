@@ -1,0 +1,217 @@
+.pantry-page {
+  padding-top: var(--spacing-24);
+  padding-bottom: var(--spacing-20);
+  min-height: calc(100vh - 80px);
+}
+
+.pantry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: var(--spacing-12);
+}
+
+.pantry-header-text h1 {
+  font-size: 40px;
+  margin-bottom: var(--spacing-2);
+}
+
+.pantry-header-text p {
+  color: var(--color-text-secondary);
+  font-size: 18px;
+}
+
+.pantry-actions {
+  display: flex;
+  gap: var(--spacing-4);
+}
+
+.category-filters {
+  display: flex;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-8);
+  overflow-x: auto;
+  padding-bottom: var(--spacing-2);
+  scrollbar-width: none; /* Firefox */
+}
+
+.category-filters::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.filter-btn {
+  padding: var(--spacing-2) var(--spacing-6);
+  border-radius: var(--radius-full);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.dark-mode .filter-btn {
+  background-color: var(--color-beige);
+}
+
+.filter-btn:hover {
+  background-color: var(--color-cream);
+}
+
+.filter-btn.active {
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  border-color: var(--color-orange);
+}
+
+/* Pantry Shelves */
+.pantry-shelf {
+  margin-bottom: var(--spacing-12);
+}
+
+.shelf-title {
+  font-size: 24px;
+  margin-bottom: var(--spacing-6);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  color: var(--color-text-primary);
+}
+
+.shelf-title .count {
+  font-size: 14px;
+  background-color: var(--color-beige);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  color: var(--color-text-secondary);
+}
+
+.shelf-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-6);
+}
+
+.ingredient-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-normal);
+}
+
+.dark-mode .ingredient-card {
+  background-color: var(--color-cream);
+  border-color: var(--color-border);
+}
+
+.ingredient-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-orange);
+}
+
+.card-image {
+  height: 160px;
+  width: 100%;
+  position: relative;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.status-badge {
+  position: absolute;
+  top: var(--spacing-3);
+  right: var(--spacing-3);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-fresh {
+  background-color: var(--color-green-light);
+  color: var(--color-green-dark);
+}
+
+.status-expiring {
+  background-color: var(--color-orange-light);
+  color: var(--color-orange-hover);
+}
+
+.status-expired {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.card-content {
+  padding: var(--spacing-5);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-4);
+}
+
+.card-header h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.quantity {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.freshness-meter {
+  margin-bottom: var(--spacing-4);
+}
+
+.meter-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-2);
+}
+
+.meter-bar {
+  height: 6px;
+  width: 100%;
+  background-color: var(--color-beige);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.meter-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--spacing-4);
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 768px) {
+  .pantry-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-6);
+  }
+}

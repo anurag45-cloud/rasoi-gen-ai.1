@@ -1,0 +1,225 @@
+.family-page {
+  padding-top: var(--spacing-24);
+  padding-bottom: var(--spacing-20);
+  min-height: calc(100vh - 80px);
+}
+
+.family-header {
+  text-align: center;
+  margin-bottom: var(--spacing-16);
+}
+
+.family-header h1 {
+  font-size: 40px;
+  margin-bottom: var(--spacing-4);
+}
+
+.family-header p {
+  color: var(--color-text-secondary);
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.family-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--spacing-8);
+}
+
+.profile-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-normal);
+}
+
+.dark-mode .profile-card {
+  background-color: var(--color-beige);
+  border-color: var(--color-border);
+}
+
+.profile-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--color-orange);
+}
+
+.profile-header {
+  padding: var(--spacing-6);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-cream);
+}
+
+.dark-mode .profile-header {
+  background-color: var(--color-cream);
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--color-white);
+  box-shadow: var(--shadow-sm);
+}
+
+.profile-info h3 {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.profile-info p {
+  color: var(--color-text-secondary);
+  font-size: 14px;
+}
+
+.profile-body {
+  padding: var(--spacing-6);
+}
+
+.health-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-6);
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-label {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.metric-value {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.diet-section {
+  margin-bottom: var(--spacing-6);
+}
+
+.diet-section h4 {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-3);
+  text-transform: uppercase;
+}
+
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+}
+
+.tag {
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.tag-red {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.tag-green {
+  background-color: var(--color-green-light);
+  color: var(--color-green-dark);
+}
+
+.tag-orange {
+  background-color: var(--color-orange-light);
+  color: var(--color-orange-hover);
+}
+
+.profile-footer {
+  padding: var(--spacing-4) var(--spacing-6);
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.add-member-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed var(--color-border);
+  background-color: transparent;
+  cursor: pointer;
+  min-height: 400px;
+}
+
+.add-member-card:hover {
+  background-color: var(--color-cream);
+  border-color: var(--color-orange);
+}
+
+.add-icon {
+  color: var(--color-orange);
+  margin-bottom: var(--spacing-4);
+  background-color: var(--color-orange-light);
+  padding: 16px;
+  border-radius: 50%;
+}
+
+.ai-meal-score {
+  margin-top: var(--spacing-16);
+  padding: var(--spacing-8);
+  border-radius: var(--radius-xl);
+  text-align: center;
+}
+
+.ai-meal-score h2 {
+  font-size: 28px;
+  margin-bottom: var(--spacing-4);
+}
+
+.score-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: conic-gradient(var(--color-green) 93%, var(--color-beige) 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing-6);
+  position: relative;
+}
+
+.score-inner {
+  width: 100px;
+  height: 100px;
+  background-color: var(--color-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-green-dark);
+}
+
+.dark-mode .score-inner {
+  background-color: var(--color-beige);
+}
+
+@media (max-width: 768px) {
+  .family-grid {
+    grid-template-columns: 1fr;
+  }
+}

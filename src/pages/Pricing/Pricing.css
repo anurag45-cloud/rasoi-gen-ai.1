@@ -1,0 +1,132 @@
+.pricing-page {
+  padding-top: var(--spacing-24);
+  padding-bottom: var(--spacing-20);
+  min-height: calc(100vh - 80px);
+}
+
+.pricing-header {
+  text-align: center;
+  margin-bottom: var(--spacing-16);
+}
+
+.pricing-header h1 {
+  font-size: 48px;
+  margin-bottom: var(--spacing-4);
+}
+
+.pricing-header p {
+  color: var(--color-text-secondary);
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-8);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pricing-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-8);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+}
+
+.dark-mode .pricing-card {
+  background-color: var(--color-beige);
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+}
+
+.pricing-card.popular {
+  border-color: var(--color-orange);
+  box-shadow: 0 10px 30px -5px rgba(255, 107, 53, 0.2);
+  position: relative;
+}
+
+.popular-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  padding: 4px 16px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.plan-name {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: var(--spacing-2);
+}
+
+.plan-price {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: var(--spacing-6);
+  display: flex;
+  align-items:baseline;
+}
+
+.plan-price span {
+  font-size: 16px;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  margin-left: 4px;
+}
+
+.plan-features {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-8);
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-3);
+  font-size: 15px;
+  color: var(--color-text-secondary);
+}
+
+.feature-icon {
+  color: var(--color-green);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.plan-btn {
+  width: 100%;
+  padding: 16px;
+  font-size: 16px;
+}
+
+@media (max-width: 992px) {
+  .pricing-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+}
